@@ -768,6 +768,7 @@ def build_mirroruris(origud, mirrors, ld):
                     ud.method.clean(ud, ld)
                 except UnboundLocalError:
                     pass
+                adduri(newud, uris, uds)
                 continue   
             uris.append(newuri)
             uds.append(newud)
