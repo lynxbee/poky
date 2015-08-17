@@ -18,3 +18,12 @@ COMPATIBLE_MACHINE_genericx86-64 = "genericx86-64"
 COMPATIBLE_MACHINE_edgerouter = "edgerouter"
 COMPATIBLE_MACHINE_beaglebone = "beaglebone"
 COMPATIBLE_MACHINE_mpc8315e-rdb = "mpc8315e-rdb"
+
+FIXES = "file://76ae03828756bac2c1fa2c7eff7485e5f815dbdb.patch \
+         file://bd447b61c49fc26f0299587db3e6d66da49dc529.patch \
+         file://aeea3592a13bf12861943e44fc48f1f270941f8d.patch \
+         file://bde304575f3ecaa9570a9329196dffaadf3adafa.patch"
+
+SRC_URI_append = " ${FIXES}"
+
+FILESEXTRAPATHS_prepend := "${THISDIR}/${BPN}:"
